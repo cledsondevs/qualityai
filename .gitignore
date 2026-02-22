@@ -1,0 +1,37 @@
+# ─── Python ───────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ─── Environments ─────────────────────
+venv/
+.venv/
+env/
+.env
+*.env
+
+# ─── IDE / OS ─────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+
+# ─── Testing & Reports ────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ─── Build / dist ─────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ─── Appium/Logs ──────────────────────
+appium_logs/
+*.log
+screenshots/

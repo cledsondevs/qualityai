@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality AI — Automação Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>BIBLIOTECA</h3>
+            </div>
+            <div class="sidebar-content">
+                <div class="scenario-selector">
+                    <label for="scenario-dropdown">Cenários Prontos</label>
+                    <select id="scenario-dropdown">
+                        <option value="">-- Selecione um cenário --</option>
+                    </select>
+                </div>
+                <div class="scenario-selector">
+                    <label for="llm-selector">Cérebro IA (LLM)</label>
+                    <select id="llm-selector">
+                        <option value="ollama">Ollama (Qwen2 7B)</option>
+                        <option value="google">Google Gemini 3 Preview</option>
+                    </select>
+                </div>
+                <div class="scenario-selector">
+                    <label for="exec-mode">Modo de Execução</label>
+                    <select id="exec-mode">
+                        <option value="dynamic">IA Reativa (Dinâmica)</option>
+                        <option value="fixed">Script Local (Fixo)</option>
+                    </select>
+                </div>
+                <div class="sidebar-info">
+                    <p>Selecione um cenário para preencher automaticamente os campos ou escolha a IA para o
+                        processamento.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="sprint-container">
+            <header>
+                <h1>Quality AI <span>Testes Automatizados com IA</span></h1>
+            </header>
+
+            <main>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="dev-name">Emulador</label>
+                        <input type="text" id="dev-name" value="emulator-5554" placeholder="Ex: emulator-5554">
+                    </div>
+                    <div class="field">
+                        <label for="app-pkg-select">App / Pacote</label>
+                        <select id="app-pkg-select">
+                            <option value="com.android.settings">Ajustes</option>
+                            <option value="com.google.android.gm">Gmail</option>
+                            <option value="com.itau.investimentos">Itaú Investimentos</option>
+                            <option value="custom">Outro (Personalizado)...</option>
+                        </select>
+                        <input type="text" id="app-pkg-custom" style="display: none; margin-top: 10px;"
+                            placeholder="Digite o package name...">
+                    </div>
+                    <div class="field full-width">
+                        <label for="dynamic-goal">Objetivo do Teste (Prompt)</label>
+                        <textarea id="dynamic-goal"
+                            placeholder="Descreva o que deseja fazer... Ex: Abra o app ion e teste o login com Agencia: 9999..."></textarea>
+                    </div>
+                    <button id="btn-execute" class="btn-execute">🚀 INICIAR AUTOMAÇÃO</button>
+                </div>
+
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="dot-control red"></span>
+                            <span class="dot-control yellow"></span>
+                            <span class="dot-control green"></span>
+                            <span style="margin-left: 10px;">TERMINAL DE EXECUÇÃO</span>
+                        </div>
+                        <span id="status-text">LLM: Verificando...</span>
+                    </div>
+                    <div id="terminal">Aguardando comando...</div>
+                </div>
+
+                <div class="footer-stats">
+                    <div class="status-indicator">
+                        <div id="status-dot" class="dot"></div>
+                        <span id="status-label">Backend Status</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- DEVICE PREVIEW (RIGHT SIDEBAR) -->
+        <aside class="device-preview">
+            <div class="preview-header">
+                <h3>SCREENSHOT ATUAL</h3>
+            </div>
+            <div class="preview-content">
+                <img id="device-screen" src="/screenshots/screenshot.png"
+                    onerror="this.src='https://placehold.co/360x720?text=Aguardando+Simulação'" alt="Device Screen">
+            </div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

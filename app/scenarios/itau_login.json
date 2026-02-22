@@ -1,0 +1,22 @@
+[
+    {
+        "id": "itau-login",
+        "name": "Login no App Ion",
+        "package": "com.itau.investimentos",
+        "goal": "Abra o app ion e teste o login com os dados: Agencia: 9999, Conta: 009999, Senha: 99999",
+        "description": "Cenário de teste de login automatizado para o app de investimentos do Itaú.",
+        "steps": [
+            "Clique em Entrar",
+            "Wait 2",
+            "Clique em Agência",
+            "Digite 1500",
+            "Clique em Conta",
+            "Digite 99999",
+            "Clique em Senha eletrônica",
+            "Digite teste",
+            "Clique em Entrar",
+            "Wait 2",
+            "Clique em Conhecer perfil"
+        ]
+    }
+]

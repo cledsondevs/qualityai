@@ -35,3 +35,4 @@ build/
 appium_logs/
 *.log
 screenshots/
+app/scenarios/
